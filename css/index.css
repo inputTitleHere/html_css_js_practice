@@ -1,0 +1,535 @@
+/* body */
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+
+:root{
+  --color-var: rgb(173, 255, 47);
+  --color-tester:rgb(31, 18, 209);
+}
+
+.locater{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    z-index: 999;
+}
+
+
+
+/* 메인 컨테이너 */
+.maincontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /*width: 1024px;*/
+    min-width: 1024px;
+    height: 75vh;
+    min-height: 768px;
+    
+    user-select: none;
+    margin: 0 auto;
+    /*border: 5px solid darkgray;*/
+    border-top: none;
+    border-bottom: none;
+    overflow: hidden;
+}
+
+
+.buttonBorder{
+  cursor: pointer;
+  user-select: none;
+}
+
+.indexLink{
+  cursor: pointer;
+  max-width: fit-content;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 40px;
+  color: linen;
+  text-align: center;
+  text-shadow: 4px 4px 2px black, -2px -2px 2px dodgerblue;
+  margin: 3px auto;
+}
+.boxImage{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 340px;
+  height: 340px;
+  top: 0px;
+}
+.buttonImageMain{
+  position: absolute;
+  width: 315px;
+  height: 220px;
+  top: 10%;
+  opacity: 1;
+  z-index: 2;
+}
+.buttonImageOverlay{
+  position: absolute;
+  width: 315px;
+  height: 220px;
+  top: 10%;
+  opacity: 0;
+  z-index: 3;
+  transition-duration: .2s;
+  
+}
+.smallerButton:hover .buttonImageOverlay{
+  transition-duration: .3s;
+  opacity: 1;
+}
+
+
+.hideContent{
+    visibility: hidden;
+    user-select: none;
+    opacity: 0;
+    transition: visibility 0.2s linear, opacity 0.2s linear;
+}
+.showContent{
+    transition: visibility 0.2s linear, opacity 0.2s linear;
+    visibility: visible;
+    opacity: 1;
+}
+
+.smallerButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  border: 3px solid var(--color-var);
+  width: 215px;
+  height: 120px;
+  transition-duration: .3s;
+  overflow: hidden;
+  background: rgb(75, 75, 75);
+  background-image: radial-gradient(var(--color-var) 1.5px, transparent 0);
+  background-size: 14px 14px;
+}
+.smallerButton:hover{
+  transform: scale(125%,125%);
+  background: rgb(75, 75, 75);
+  border: 3px solid var(--color-var);
+  background-image: radial-gradient(var(--color-var) 1.5px, transparent 0);
+  box-shadow: 0px 0px 5px 5px var(--color-var);
+  background-size: 14px 14px;
+}
+.barText{
+  position: absolute;
+  z-index: 5;
+}
+
+#bars{
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    display: flex;
+    width: 1024px;
+    z-index: 2;
+}
+#barChecker:checked + #bars{
+    visibility: hidden;
+}
+
+
+/*  좌측 사이드바(자기소개 페이지, 본인 관심사 페이지, 개발자 로드맵 )*/
+#leftBar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    left: 3px;
+    width: 300px;
+    height: 80vh;
+    margin-bottom: 150px;
+    /*border: 5px solid salmon;*/
+}
+
+/* 우측 사이드바 */
+#rightBar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    right: 3px;
+    width: 300px;
+    height: 80vh;
+    margin-bottom: 150px;
+    /*border: 5px solid salmon;*/
+}
+
+#bottomBar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -22rem;
+    width: 450px;
+    height: 150px;
+    margin-bottom: 70px;
+    /*border: 5px solid salmon;*/
+}
+
+
+/* 센터 로그인 아이콘 관련*/
+#centercontainer{
+    background-color: rgb(75, 75, 75);
+    /*width: 1024px;*/
+    height: 75vh;
+    min-height: 768px;
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+#centerRotateWrapper{
+    position: absolute;
+    top:23%;
+    transition-duration: 0.7s;
+    transform-origin: top center;
+    margin: 0 auto;
+    z-index: 3;
+}
+#centerRotaterPos{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+
+
+.moveUp{
+    transform: translate(0,-125px) scale(35%,35%);
+    transition-duration: .7s;
+}
+#forest-background{
+    position: absolute;
+    width: 100vw;
+    /*top: -50%;*/
+    opacity: 0.5;
+}
+#centerrotate:hover #forest-background{
+    opacity: 1;
+}
+
+#centerimage{
+    position: absolute;
+    display: flex;
+    width: 340px;
+    height: 340px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition-duration: 2s;
+    transition-delay: 0s;
+    transition-timing-function: cubic-bezier(.18,.47,.3,1);
+    /*background-image: url(../sample/image/img1.jpg);*/
+    /*background: linear-gradient(-45deg, rgb(70,70,70) 20%, rgb(85,19,112) 40%, rgb(29,135,157) 60%, rgb(30,200,41) 80%);*/
+}
+
+#centerrotate:hover #centerimage{
+    transform: translate(-50%, -50%) rotate(-180deg) scale(120%, 120%);
+    transition-duration: 2s;
+    transition-delay: 0s;
+}
+#moon-image{
+    transition-duration: 1s;
+}
+#centerrotate:hover #moon-image{
+    transition-duration: 1s;
+    opacity: 0;
+}
+#sol-image{
+    position: absolute;
+    top:0;
+    z-index: -1;
+}
+
+/* 로그인 버튼 */
+#centerrotate{
+
+    width: 15em;
+    height: 15em;
+    border: 5px solid dodgerblue;
+    box-shadow: 0px 0px 45px 20px dodgerblue;
+    border-radius: 20%;
+    overflow: hidden;
+    
+    transform-origin: center;
+    transform: rotate(45deg) ;
+    transition-duration: 2s;
+    transition-timing-function: cubic-bezier(.18,.47,.3,1);
+    transition-delay: 0s;
+}
+#centerrotate:hover{
+    transform: rotate(225deg) scale(120%,120%);
+    border-color:gold;
+    transition-delay: 0s;
+    box-shadow: none;
+}
+
+/* ====================Center Text==================== */
+#centerTextWrapper{
+    position: absolute;
+    width: 340px;
+    height: 340px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition-duration: 2s;
+    transition-delay: 0s;
+    transition-timing-function: cubic-bezier(.18,.47,.3,1);
+}
+#centerrotate:hover #centerTextWrapper{
+    transform: translate(-50%, -50%) rotate(-180deg) scale(120%, 120%);
+    transition-delay: 0s;
+}
+#centerLoginText{
+    display: inline-block;
+    position: absolute;
+    top:36%;
+    left: 22%;
+    text-decoration: underline;
+    text-align: center;
+    font-size: 65px;
+    color: rgb(20, 20, 120);
+    width: 175px;
+
+
+    transform: rotate(-45deg);
+    transition-timing-function: cubic-bezier(.18,.47,.3,1);
+    transition-duration: 2s;
+    transition-delay: 0s;
+}
+#centerrotate:hover .centerText{
+    transform: rotate(-45deg);
+    color: peru;
+}
+
+#centerRegisterText{
+    position: absolute;
+    color: rgb(20, 20, 120);;
+    top: 53%;
+    left: 44%;
+
+    font-size: 30px;
+
+    transform: rotate(-45deg);
+    transition-timing-function: cubic-bezier(.18,.47,.3,1);
+    transition-duration: 2s;
+    transition-delay: 0s;
+}
+
+/*     로그인 및 회원가입 창       */
+#loginWindow{
+    margin-top: 2em;
+    justify-self: center;
+    position: absolute;
+    background-image: url("../image/woodPlank.jpg");
+    border: 3px solid antiquewhite;
+    border-radius: 2em;
+    width: 400px;
+    height: 600px;
+    z-index: 2;
+    
+    box-shadow: 0px 0px 20px 15px gray;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s linear, opacity 0.3s linear;
+}
+#loginButton:checked + #loginWindow{
+    transition: visibility 0.3s linear, opacity 0.3s linear;
+    visibility: visible;
+    opacity: 1;
+    width: 400px;
+    height: 600px;
+    z-index: 2;
+}
+.textContent{
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s linear, opacity 0.3s linear;
+}
+
+#loginButton:checked + #loginWindow .textContent{
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0.3s linear, opacity 0.3s linear;
+}
+
+#loginButton{
+    visibility: hidden;
+    position: absolute;
+}
+#loginLabel{
+    cursor: pointer;
+}
+
+/** =========== LOGIN FIELDS ================ */
+#loginWindowWrapper{
+    user-select: none;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+#fieldsetLogin{
+    padding:6px;
+    margin-top: 55px;
+    height: 520px;
+    width: 367px;
+    border: 3px solid gold;
+    border-radius: 30px;
+    background-color: beige;
+}
+#legendLogin{
+    user-select: none;
+    background-color: gold;
+    padding: 7px;
+    border-radius: 5px;
+    margin:0 auto;
+}
+#loginInputWrapper{
+    display: flex;
+    justify-content: flex-start;
+}
+#loginConfirm{
+    display: flex;
+    justify-content: center;
+    
+}
+#loginConfirmButton{
+    font-family: 'Jua', sans-serif;
+    font-size: 30px;
+    cursor: pointer;
+    margin: 10px;
+    width:300px;
+    border: 5px solid gold;
+    background-color: gold;
+    border-radius: 20px;
+    box-shadow: 0 5px 0 goldenrod,0 7px 15px -4px black;
+    transition: box-shadow 0.1s ease-out, margin-top .1s ease-out;
+}
+#loginConfirmButton:active{
+    box-shadow: none;
+    margin-top: 16px;
+}
+
+#cancelLoginText{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+#registerPlainText{
+    margin: 25px 0px;
+    font-size: 20px;
+}
+#registerSection{
+    width: 380px;
+    position: absolute;
+    bottom: 20px;
+}
+#registerText{
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    user-select: none;
+    text-align: right;
+}
+#registerButton{
+    font-family: 'Jua', sans-serif;
+    font-size: 30px;
+    cursor: pointer;
+    margin: 8px;
+    border: 5px solid rgb(255, 85, 55);
+    background-color: rgb(255, 85, 55);
+    border-radius: 20px;
+    box-shadow: 0 5px 0 darkred,0 7px 15px -4px black;
+    transition: box-shadow 0.1s ease-out, margin-top .1s ease-out;
+}
+#registerButton:active{
+    box-shadow: none;
+    margin-top: 14px;
+}
+
+#registerTextWrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.loginInput{
+    margin-top: 0px;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: space-evenly;
+    text-align: left;
+    font-size: 37px;
+}
+.loginInputText{
+    height: 35px;
+    margin: 4px;
+    width: 350px;
+    font-size: 20px;
+    text-align: center;
+    border: 3px solid transparent;
+    border-radius: 15px;
+    background-image: linear-gradient(#fff,#fff),linear-gradient(90deg, rgba(255,174,80,1) 20%, rgba(65,255,202,1) 80%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+.loginInputText:focus{
+    outline: none; 
+    border: 3px solid transparent;
+    border-radius: 15px;
+    background-image: linear-gradient(270deg, rgba(255,174,80,1) 20%, rgba(65,255,202,1) 80%);
+    background-origin: border-box;
+    background-clip: border-box;
+}
+
+.loginLabelText{
+    user-select: none;
+    padding-left: 20px;
+}
+.innerHrDivider{
+    width: 350px;
+    border:2px dashed gold;
+}
+.hrGoldDivider{
+    border: 5px solid gold;
+}
+.redSeparator{
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    font-size: 20px;
+    color:red;
+    margin: 8px 0px;
+}
+.redSeparator::before,.redSeparator::after{
+    content: "";
+    flex-grow: 1;
+    border-top: 5px dotted red;
+    height: 5px;
+    font-size: 0px;
+    line-height: 0px;
+    margin: 0px 8px;
+}
+/* ==============FOOTER PART==============*/
+
+
+

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>나의 관심사</title>
+
+  <link rel="stylesheet" href="./css/header_footer.css">
+  <link rel="stylesheet" href="./css/myinterest.css">
+  <script src="./js/myinterest.js"></script>
+  <script src="./js/header_clock.js"></script>
+</head>
+<body>
+<header class="headercontainer">
+  <div class="navbar-wrapper">
+      <nav class="navbar">
+        <table class="navbar-table">
+          <tr>
+            <td>
+              <div class="pageIcon">
+                <a href="index.html" draggable="false">나만의 작은 페이지</a>
+                <span> - 나의 관심사</span>
+              </div>
+            </td>
+          </tr>
+          <tr class="links-tr">
+            <td>
+              <div class="linkicon-wrapper">
+                <div class="left-border link-div">
+                  <a href="./index.html" class="links headerlinks">&nbsp;메인홈&nbsp;</a>
+                </div>
+                <div class="center-border link-div">
+                  <a href="./aboutme.html" class="links headerlinks">&nbsp;자기소개&nbsp;</a>
+                </div>
+                <div class="right-border link-div">
+                  <a href="./roadmap.html" class="links headerlinks">&nbsp;로드맵&nbsp;</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div class="clockwrapper" id="clock">
+          <table class="clocktable">
+            <tr>
+              <td class="clockstyle clockleft" id="yearmonthdate"></td>
+              <td class="clockstyle clockright" id="currenttime" rowspan="2"></td>
+            </tr>
+            <tr>
+              <td class="clockstyle clockleft" id="dayofweek"></td>
+            </tr>
+          </table>
+        </div>
+      </nav>
+  </div>
+</header>
+
+
+<div id="maincontentwrapper">
+<div id="maincontent">
+  <div id="blendercontentwrapper">
+    <div class="titledecoration firsttitledecoration"></div>
+    <div class="titledecoration secondtitledecoration"></div>
+    <div class="titledecoration thirdtitledecoration"></div>
+    <div class="titledecoration fourthtitledecoration"></div>
+    <div class="titlewrapper" onmouseenter="colorChange();" onmouseleave="colorReset();">
+      <a href="https://www.blender.org/" target="_blank">
+        <img src="./icons/blender.svg" alt="blender_svg_load_fail" id="blendericon">
+      </a>
+    </div>
+    <div class="content" id="blendercontent" onmouseenter="colorChange();" onmouseleave="colorReset();">
+      <h1> ㅁ 블렌더(Blender)란 무엇인가?</h1> 
+      <p class="information">
+        블렌더는 3D 컴퓨터 그래픽 소프트웨어 툴셋으로 <span class="highlight">
+        애니메이션, 3D-프린팅, 모션 그래픽스, 반응형 3D 어플리케이션, VR, 그리고 게임</span>등의 여러 요소들을 제작하는데 사용되는 <span class="highlight">무료 오픈소스 소프트웨어</span>이다. 
+      </p>
+      <br>
+      <h1> ㅁ 블렌더로 가능한 것</h1> 
+      <p class="information">
+        블렌더로 <span class="highlight">3D 모델링, UV 매핑, 텍스쳐링, 디지털 드로잉, 래스터 그래픽 효과, 리깅(Rigging), 액체 및 연기 시뮬레이션, 파티클 시뮬레이션, 소프트 바디 시뮬레이션, 스컬핑(Sculpting), 애니메이션 제작, 모션 트래킹, 렌더링, 비디오 편집, 영상 합성</span>등이 가능하다.
+      </p>
+      <br>
+      <iframe width="800" height="430" src="https://www.youtube.com/embed/2nzUNMTUGQE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="blenderintroyoutube"></iframe>
+      <br>
+
+      <h1> ㅁ 블렌더를 사용하는데 비용이 필요한가?</h1> 
+      <p class="information">
+        위에서 언급했다시피 <span class="highlight">무료 오픈소스 소프트웨어</span>이다. 
+        <br>
+        <a href="https://www.blender.org/" class="text-links" target="_blank"><img src="./icons/Blender_logo_no_text.svg" alt="" class="intexticon"> 블렌더 사이트</a> 또는 <a href="https://store.steampowered.com/app/365670/Blender/" class="text-links" target="_blank"><img src="./icons/steam.svg" alt="" class="intexticon"> STEAM</a> 에서 다운로드 가능하다. 
+        <span class="highlight">STEAM에서 다운로드 받는 경우 STEAM 계정이 필요하다.</span>
+      </p>
+      <br>
+      <h1>ㅁ 사용 예시</h1>
+      <p class="information">
+        &nbsp;제작해본 간단한 물체중 하나이다. 여러층을 이룰 아파트의 기본 두개 층이다.
+        <br>
+        <img src="./image/blender_capture_mywork_1.png" alt="" class="imgexample">
+        <br>
+      </p>
+      <p class="information dotseparator">&nbsp;</p>
+      <p class="information">
+        &nbsp;약간의 텍스쳐와 광원효과를 주고 배경 <abbr title="High Dynamic Range Imaging">HDRI</abbr>를 부여한 다음 렌더링한 화면이다.
+        <br>
+        <img src="./image/blender_capture_mywork_2.png" alt="" class="imgexample">
+      </p>
+
+      <br><br>
+    </div>
+  </div> <!-- blender content wrapper-->
+
+
+
+</div> <!-- main content -->
+</div> <!-- main content wrapper-->
+
+<footer class="footercontainer">
+  <div id="footerText">
+      가로 크기 : 1024px, 세로 크기 : 자유롭게
+  </div>
+</footer>
+
+</body>
+</html>

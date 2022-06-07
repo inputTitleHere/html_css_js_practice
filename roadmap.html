@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RoadMap</title>
+  <link rel="stylesheet" href="./css/roadmap.css">
+  <link rel="stylesheet" href="./css/header_footer.css">
+  <script src="./js/roadmap.js"></script>
+  <script src="./js/header_clock.js"></script>
+
+</head>
+<body id="body">
+  <!-- 어떤 기술 스택을 배워볼지 -> 몇년차에 어떤 회사, 몇년차에 이직, 등등 -->
+<header class="headercontainer">
+  <div class="navbar-wrapper">
+      <nav class="navbar">
+        <table class="navbar-table">
+          <tr>
+            <td>
+              <div class="pageIcon">
+                <a href="index.html" draggable="false">나만의 작은 페이지</a>
+                <span> - 로드맵</span>
+              </div>
+            </td>
+          </tr>
+          <tr class="links-tr">
+            <td>
+              <div class="linkicon-wrapper">
+                <div class="left-border link-div">
+                  <a href="./index.html" class="links headerlinks">&nbsp;메인홈&nbsp;</a>
+                </div>
+                <div class="center-border link-div">
+                  <a href="./aboutme.html" class="links headerlinks">&nbsp;자기소개&nbsp;</a>
+                </div>
+                <div class="right-border link-div">
+                  <a href="./myinterest.html" class="links headerlinks">&nbsp;나의 관심사&nbsp;</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div class="clockwrapper" id="clock">
+          <table class="clocktable">
+            <tr>
+              <td class="clockstyle clockleft" id="yearmonthdate"></td>
+              <td class="clockstyle clockright" id="currenttime" rowspan="2"></td>
+            </tr>
+            <tr>
+              <td class="clockstyle clockleft" id="dayofweek"></td>
+            </tr>
+          </table>
+        </div>
+      </nav>
+  </div>
+</header>
+
+
+<div id="mainContainer">
+<div class="backgroundimagewrapper">
+  <div class="shadowdefault topshadow">
+    <img src="./image/forest-road-2.jpg" alt="" class="images">
+  </div>
+  <div class="shadowdefault bothsideshadow">
+    <img src="./image/roadmap-plain.jpg" alt="" class="images">
+  </div>
+  <div class="shadowdefault bottomshadower">
+    <img src="./image/night-road.jpg" alt="" class="images">
+    <div class="bottomShadower"></div>
+  </div>
+</div>
+
+<div id="showAllButtonWrapper">
+  <button type="button" id="showAllButton" onclick="showAll();">모두 보이기!</button>
+</div>
+<div id="roadMapUlWrapper">
+
+<ul id="roadmapUl">
+  <li class="majorLi forceExtraMargin">
+    <div class="majorDivWrapper">
+      <div class="majorDiv">
+        백엔드 언어 배우기
+      </div>
+      <div class="minorDivRight">
+        <span class="innerContent">Java</span>
+        <span class="innerContent">Python</span>
+        <span class="innerContent">C, C++</span>
+        <span class="innerContent">C#</span>
+        <span class="innerContent">Kotlin</span>
+      </div>
+    </div>
+  </li>
+  <li class="linewrapper"><div class="line"></div></li>
+  <li class="linewrapperdark"><div class="linedark"></div></li>
+  <li class="majorLi">
+    <div class="majorDivWrapper">
+      <div class="majorDiv">
+        데이터베이스 및 PL/SQL 배우기
+      </div>
+      <div class="minorDivLeft">
+        <span class="innerContent">Oracle DB</span>
+        <span class="innerContent">MySQL</span>
+        <span class="innerContent">PostgreSQL</span>
+        <span class="innerContent">MongoDB</span>
+      </div>
+    </div>
+  </li>
+  <li class="majorLi">
+    <div class="majorDivWrapper">
+      <div class="majorDiv">
+        OS 기초 지식
+      </div>
+      <div class="minorDivRight">
+        <span class="innerContent">터미널 사용법</span>
+        <span class="innerContent">OS 작동원리</span>
+        <span class="innerContent">프로세스 관리 및 통신</span>
+        <span class="innerContent">스레드와 동시성</span>
+        <span class="innerContent">메모리 관리</span>
+        <span class="innerContent">입출력 관리</span>
+        <span class="innerContent">POSIX기초</span>
+        <span class="innerContent">네트워크 기본 개념</span>
+      </div>
+    </div>
+  </li>
+  <li class="majorLi">
+    <div class="majorDivWrapper">
+      <div class="majorDiv">
+        프런트엔드 언어
+      </div>
+      <div class="minorDivLeft">
+        <span class="innerContent">HTML</span>
+        <span class="innerContent">CSS</span>
+        <span class="innerContent">JavaScript</span>
+        <span class="innerContent">TypeScript</span>
+      </div>
+    </div>
+  </li>
+  <li class="majorLi">
+    <div class="majorDivWrapper">
+      <div class="majorDiv">
+        백엔드 기술 스택
+      </div>
+      <div class="minorDivRight">
+        <span class="innerContent">Spring</span>
+        <span class="innerContent">SpringBoot</span>
+        <span class="innerContent">NodeJS</span>
+      </div>
+    </div>
+  </li>
+  <li class="majorLi">
+    <div class="majorDivWrapper">
+      <div class="majorDiv">
+        프론트엔드 기술 스택
+      </div>
+      <div class="minorDivLeft">
+        <span class="innerContent">ReactJS</span>
+        <span class="innerContent">GraphQL</span>
+        <span class="innerContent">VueJS</span>
+        <span class="innerContent">Vuex</span>
+        <span class="innerContent">AngularJS</span>
+        <span class="innerContent">NextJS</span>
+      </div>
+    </div>
+  </li>
+  <li class="majorLi">
+    <div class="majorDivWrapper">
+      <div class="majorDiv">
+        버전관리 및 배포 시스템
+      </div>
+      <div class="minorDivRight">
+        <span class="innerContent">Git 기본 사용법</span>
+        <span class="innerContent">GitHub</span>
+        <span class="innerContent">Docker</span>
+        <span class="innerContent">Jenkins</span>
+      </div>
+    </div>
+  </li>
+  <li class="majorLi">
+    <div class="majorDivWrapper">
+      <div class="majorDiv">
+        데이터 기술 스택
+      </div>
+      <div class="minorDivLeft">
+        <span class="innerContent">Hadoop</span>
+        <span class="innerContent">Hive</span>
+        <span class="innerContent">Kafka</span>
+        <span class="innerContent">Spark</span>
+      </div>
+    </div>
+  </li>
+  <li class="majorLi">
+    <div class="majorDivWrapper">
+      <div class="majorDiv">
+        테스팅 툴
+      </div>
+      <div class="minorDivRight">
+        <span class="innerContent">JUnit</span>
+        <span class="innerContent">단위 테스트</span>
+        <span class="innerContent">기능 테스트</span>
+      </div>
+    </div>
+  </li>
+  <li class="majorLi">
+    <div class="majorDivWrapper">
+      <div class="majorDiv">
+        실제 서비스 제작 및 배포
+      </div>
+      <div class="minorDivLeft">
+        <span class="innerContent">위 기술을 사용해</span>
+        <span class="innerContent">실제로</span>
+        <span class="innerContent">서비스를 만들어</span>
+        <span class="innerContent">배포해봅시다</span>
+      </div>
+    </div>
+  </li>
+  <li class="majorLi">
+    <div class="majorDivWrapper">
+      <div class="majorDiv lastInLine">
+        ... 이 하 생 략 ...
+      </div>
+    </div>
+  </li>
+</ul>
+</div>
+
+</div>
+
+<footer class="footercontainer">
+  <div id="footerText">
+      가로 크기 : 1024px, 세로 크기 : 자유롭게
+  </div>
+</footer>
+
+
+</body>
+</html>

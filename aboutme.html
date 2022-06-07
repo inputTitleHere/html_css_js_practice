@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+
+
+  <link rel="stylesheet" href="./css/aboutme.css">
+  <link rel="stylesheet" href="./css/header_footer.css">
+  <script src="./js/aboutme.js"></script>
+  <script src="./js/header_clock.js"></script>
+<body>
+  
+  <header class="headercontainer">
+    <div class="navbar-wrapper">
+        <nav class="navbar">
+          <table class="navbar-table">
+            <tr>
+              <td>
+                <div class="pageIcon">
+                  <a href="index.html" draggable="false">나만의 작은 페이지</a>
+                  <span> - About Me</span>
+                </div>
+              </td>
+            </tr>
+            <tr class="links-tr">
+              <td>
+                <div class="linkicon-wrapper">
+                  <div class="left-border link-div">
+                    <a href="./index.html" class="links headerlinks">&nbsp;메인홈&nbsp;</a>
+                  </div>
+                  <div class="center-border link-div">
+                    <a href="./myinterest.html" class="links headerlinks">&nbsp;나의 관심사&nbsp;</a>
+                  </div>
+                  <div class="right-border link-div">
+                    <a href="./roadmap.html" class="links headerlinks">&nbsp;로드맵&nbsp;</a>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+          <div class="clockwrapper" id="clock">
+            <table class="clocktable">
+              <tr>
+                <td class="clockstyle clockleft" id="yearmonthdate"></td>
+                <td class="clockstyle clockright" id="currenttime" rowspan="2"></td>
+              </tr>
+              <tr>
+                <td class="clockstyle clockleft" id="dayofweek"></td>
+              </tr>
+            </table>
+          </div>
+        </nav>
+    </div>
+</header>
+
+<div id="mainContainer">
+
+<div id="portfolio-wrapper">
+
+<table id="portfolio-table">
+  <tbody>
+    <tr class="trow separator">
+      <td>
+        <div>
+          <div class="separator-text">About Me</div>
+        </div>
+      </td>
+    </tr>
+    <tr class="trow postSeparatorContent">
+      <td>
+        <div id="dots-wrapper">
+          <div id="my-image-wrapper" class="first-row">
+            <img src="./image/little-owl.jpg" alt="" id="my-image">
+          </div>
+          <div id="dots"></div>
+        </div>
+      </td>
+      <td>
+        <div id="personal-info">
+          <table id="personal-info-table">
+            <tbody>
+              <tr>
+                <td colspan="2">
+                  <p id="introductory-word">시작하는 개발자</p>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2"><hr class="hr-liner"></td>
+              </tr>
+              <tr onmouseover="addColor(this);" onmouseleave="removeColor(this);">
+                <td class="header-column">NAME</td>
+                <td class="data-column">백승윤</td>
+              </tr>
+              <tr onmouseover="addColor(this);" onmouseleave="removeColor(this);">
+                <td class="header-column">AGE</td>
+                <td class="data-column">26</td>
+              </tr>
+              <tr onmouseover="addColor(this);" onmouseleave="removeColor(this);">
+                <td class="header-column">PHONE</td>
+                <td class="data-column">010-XXXX-YYYY</td>
+              </tr>
+              <tr onmouseover="addColor(this);" onmouseleave="removeColor(this);">
+                <td class="header-column">ADDRESS</td>
+                <td class="data-column">Songpa-gu, Seoul</td>
+              </tr>
+              <tr onmouseover="addColor(this);" onmouseleave="removeColor(this);">
+                <td class="header-column">EMAIL</td>
+                <td class="data-column">NotRealEmail@NotMail.com</td>
+              </tr>
+              <tr onmouseover="addColor(this);" onmouseleave="removeColor(this);">
+                <td class="header-column">GitHub</td>
+                <td class="data-column">여기에 깃허브 주소 입력</td>
+              </tr>
+              <tr>
+                <td colspan="2"><hr class="hr-liner"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </td>
+    </tr>
+    <tr class="trow separator">
+      <td>
+        <div>
+          <div class="separator-text">Skills</div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="postSeparatorContent" id="skill-list">
+          <div class="skill-content" id="backend" onmouseenter="addColorTitle(this);" onmouseleave="removeColorTitle(this);">
+            <div class="skill-title">Backend</div>
+            <div class="skill-item-wrapper">
+              <div id="java" class="skill-individual-items">
+                <table>
+                  <tr>
+                    <td>
+                      <img src="./icons/java.svg" alt="" class="icons">
+                    </td>
+                    <td class="td-progress">
+                      <div class="item-name">JAVA</div>
+                      <div class="progress-bg">
+                        <div class="progress-bar-75"></div>
+                        <div class="progress-text-75">75%</div>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div id="python" class="skill-individual-items">
+                <table>
+                  <tr>
+                    <td>
+                      <img src="./icons/python.svg" alt="" class="icons">
+                    </td>
+                    <td class="td-progress">
+                      <div class="item-name">PYTHON</div>
+                      <div class="progress-bg">
+                        <div class="progress-bar-65"></div>
+                        <div class="progress-text-65">65%</div>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div id="C" class="skill-individual-items">
+                <table>
+                  <tr>
+                    <td>
+                      <img src="./icons/C.svg" alt="" class="icons">
+                    </td>
+                    <td class="td-progress">
+                      <div class="item-name">C언어</div>
+                      <div class="progress-bg">
+                        <div class="progress-bar-60"></div>
+                        <div class="progress-text-60">60%</div>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div id="C++" class="skill-individual-items">
+                <table>
+                  <tr>
+                    <td>
+                      <img src="./icons/C++.svg" alt="" class="icons">
+                    </td>
+                    <td class="td-progress">
+                      <div class="item-name">C++</div>
+                      <div class="progress-bg">
+                        <div class="progress-bar-60"></div>
+                        <div class="progress-text-60">60%</div>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+                
+              </div>
+            </div>
+          </div>
+          <div class="skill-content" id="database" onmouseenter="addColorTitle(this);" onmouseleave="removeColorTitle(this);">
+            <div class="skill-title">Database</div>
+            <div class="skill-item-wrapper">
+              <div id="OracleDB" class="skill-individual-items">
+                <table>
+                  <tr>
+                    <td>
+                      <img src="./icons/Oracledb2.svg" alt="" class="icons">
+                    </td>
+                    <td class="td-progress">
+                      <div class="item-name">OracleDB</div>
+                      <div class="progress-bg">
+                        <div class="progress-bar-70"></div>
+                        <div class="progress-text-70">70%</div>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="skill-content" id="front-end" onmouseenter="addColorTitle(this);" onmouseleave="removeColorTitle(this);">
+            <div class="skill-title">Frontend</div>
+            <div class="skill-item-wrapper">
+              <div id="HTML5" class="skill-individual-items">
+                <table>
+                  <tr>
+                    <td>
+                      <img src="./icons/html5.svg" alt="" class="icons">
+                    </td>
+                    <td class="td-progress">
+                      <div class="item-name">HTML5</div>
+                      <div class="progress-bg">
+                        <div class="progress-bar-70"></div>
+                        <div class="progress-text-70">70%</div>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div id="CSS3" class="skill-individual-items">
+                <table>
+                  <tr>
+                    <td>
+                      <img src="./icons/css3.svg" alt="" class="icons">
+                    </td>
+                    <td class="td-progress">
+                      <div class="item-name">CSS3</div>
+                      <div class="progress-bg">
+                        <div class="progress-bar-70"></div>
+                        <div class="progress-text-70">70%</div>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div id="javascript" class="skill-individual-items">
+                <table>
+                  <tr>
+                    <td>
+                      <img src="./icons/javascript.svg" alt="" class="icons">
+                    </td>
+                    <td class="td-progress">
+                      <div class="item-name">Javascript</div>
+                      <div class="progress-bg">
+                        <div class="progress-bar-75"></div>
+                        <div class="progress-text-75">75%</div>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr class="trow separator">
+      <td>
+        <div>
+          <div class="separator-text">Projects / Career (TODO)</div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+</div> <!-- portfolio wrapper -->
+
+
+
+
+</div> <!-- main container-->
+
+<br><br><br><br><br><br><br><br><br><br>
+
+<footer class="footercontainer">
+  <div id="footerText">
+      가로 크기 : 1024px, 세로 크기 : 자유롭게
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

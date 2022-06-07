@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- GLOBAL STYLES -->
+<link rel="stylesheet" href="./css/header_footer.css">
+<link rel="stylesheet" href="./css/index.css">
+<script src="./js/index.js"></script>
+<script src="./js/header_clock.js"></script>
+</head>
+<body>
+<header class="headercontainer">
+  <div class="navbar-wrapper">
+    <nav class="navbar">
+      <table class="navbar-table">
+        <tr>
+          <td>
+            <div class="pageIcon">
+              <a href="index.html" draggable="false">나만의 작은 페이지</a>
+            </div>
+          </td>
+        </tr>
+        <tr class="links-tr">
+          <td>
+            <div class="linkicon-wrapper">
+              <div class="left-border link-div">
+                <a href="./myinterest.html" class="links headerlinks">&nbsp;나의 관심사&nbsp;</a>
+              </div>
+              <div class="center-border link-div">
+                <a href="./aboutme.html" class="links headerlinks">&nbsp;자기소개&nbsp;</a>
+              </div>
+              <div class="right-border link-div">
+                <a href="./roadmap.html" class="links headerlinks">&nbsp;로드맵&nbsp;</a>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div class="clockwrapper" id="clock">
+        <table class="clocktable">
+          <tr>
+            <td class="clockstyle clockleft" id="yearmonthdate"></td>
+            <td class="clockstyle clockright" id="currenttime" rowspan="2"></td>
+          </tr>
+          <tr>
+            <td class="clockstyle clockleft" id="dayofweek"></td>
+          </tr>
+        </table>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="maincontainer">
+    
+  <div id="centercontainer">
+      <img src="./image/forest-light.jpg" alt="" id="forest-background">
+      <input type="checkbox" name="loginButton" id="loginButton" onclick="loginMenuToggle();">
+      <div id="loginWindow">
+          <div class="textContent" id="loginWindowWrapper">
+              <form action="javascript:login();" method="post">
+                  <fieldset id="fieldsetLogin">
+                      <legend id="legendLogin">로 그 인</legend>
+                      <div id="loginInputWrapper">
+                        <div class="loginInput login">
+                          <span class="loginLabelText">아이디</span>
+                          <input type="text" name="id" id="id" class="loginInputText" required>
+                          <hr class="innerHrDivider">
+                          <span class="loginLabelText">비밀번호</span>
+                          <input type="password" name="password" id="password" class="loginInputText" required>
+                        </div>
+                      </div>
+                      <hr class="hrGoldDivider">
+                      <span id="cancelLoginText">!로그인을 취소하려면 위의 로그인 버튼을 눌러주세요!</span>
+                      <div id="loginConfirm">
+                          <button type="submit" id="loginConfirmButton">로그인!</button>
+                      </div>
+                      
+                      
+                  </fieldset>
+              </form>
+              <div id="registerSection">
+                  <div class="redSeparator">회 원 가 입</div>
+                  <div class="loginInput" id="registerText">
+                      <div id="registerTextWrapper">
+                          <span id="registerPlainText">아직 가입을 안하셨나요?</span>
+                          
+                      </div>
+                      <div id="registerButtonWrapper">
+                        <a href="register.html">
+                          <button type="button" id="registerButton" >회원가입</button>
+
+                        </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div id="centerRotateWrapper">
+          <label for="loginButton">
+              <div class="center rotate buttonBorder" id="centerrotate">
+                  <div id="centerimage">
+                      <img src="./image/luna-small.jpg" alt="" style="width: 340px; height:340px;" id="moon-image">
+                      <img src="./image/sol-small.jpg" alt="" style="width: 340px; height:340px;" id="sol-image">
+                  </div>
+                  <div id="centerTextWrapper">
+                      <div class="centerText" id="centerLoginText">로그인</div>
+                      <div class="centerText" id="centerRegisterText">회원가입</div>
+                  </div>
+              </div>
+          </label>
+      </div>
+      
+  </div>
+  <input type="checkbox" name="barChecker" id="barChecker" style="display: none;">
+  <div id="bars">
+      <div id="leftBar">
+        <div class="buttonBorder" id="selfIntroduceWrapper">
+          <a href="./aboutme.html" class="indexLink" id="selfIntroduceLink" draggable="false">
+            <div class="smallerButton" id="selfIntroduceButton" onmouseenter="randomizeColor();" onmouseleave="randomizeColor();">
+              <span id="selfIntroduceText">자기소개 영역</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div id="rightBar">
+        <div class="buttonBorder" id="InterestsWrapper">
+          <a href="./myinterest.html" class="indexLink" id="selfIntroduceLink" draggable="false">
+            <div class="smallerButton"  id="selfIntroduceButton" onmouseenter="randomizeColor();" onmouseleave="randomizeColor();">
+              <span id="selfIntroduceText">본인의 관심사</span>
+            </div>
+          </a>
+        </div>
+      </div>
+  
+      <div id="bottomBar">
+        <div class="buttonBorder" id="RoadMapWrapper">
+          <a href="roadmap.html" class="indexLink" id="RoadMapLink" draggable="false">
+            <div class="smallerButton" id="RoadMapButton" onmouseenter="randomizeColor();" onmouseleave="randomizeColor();">
+              <div class="barText">
+                <span id="RoadMapText">개발자 로드맵</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+  </div>
+    
+    <!-- <span class="locater">야야</span> -->
+
+
+</main>
+
+<footer class="footercontainer">
+    <div id="footerText">
+        가로 크기 : 1024px, 세로 크기 : 자유롭게
+    </div>
+</footer>
+
+
+
+
+
+
+
+</body>
+</html>

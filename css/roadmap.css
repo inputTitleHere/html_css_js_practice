@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+
+:root{
+  overflow: auto;
+  --line-height:190px;
+}
+
+#mainContainer{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 768px;
+  width: 1024px;
+  height: fit-content;
+  margin: 0px auto;
+  border: 3px dashed aquamarine;
+}
+
+
+/* image */
+/*
+#flipped-forest-road-wrapper{
+  position: ;
+}*/
+
+#flipped-forest-road{
+  position: absolute;
+  width: 1024px;
+  max-width: 1024px;
+  height: 1280px;
+  top: 0px;
+  left: 0px;
+  z-index: -3;
+  background-image: url(../image/forest-road-2.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.backgroundimagewrapper{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: hidden;
+}
+.shadowdefault{
+  position: relative;
+  display: inline-block;
+  z-index: -5;
+  width: 1024px;
+  height: 1280px;
+}
+.topshadow::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 1024px;
+  height: 1280px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.0) 0%, rgba(50, 50, 50, 0.25) 70%,rgba(50, 50, 50, 0.5) 80%,rgba(50, 50, 50, 1) 100%);
+}
+
+.bothsideshadow::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 1024px;
+  height: 1280px;
+  background: linear-gradient(to top, rgba(0,0,0,0.0) 0%, rgba(50, 50, 50, 0.25) 75%,rgba(50, 50, 50, 0.5) 80%,rgba(50, 50, 50, 1) 100%), linear-gradient(to bottom, rgba(0,0,0,0.0) 0%, rgba(50, 50, 50, 0.25) 75%,rgba(50, 50, 50, 0.5) 80%,rgba(50, 50, 50, 1) 100%);
+}
+
+.bottomshadower::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 1024px;
+  height: 1280px;
+  background: linear-gradient(to top, rgba(0,0,0,0.0) 0%, rgba(50, 50, 50, 0.25) 75%,rgba(50, 50, 50, 0.5) 80%,rgba(50, 50, 50, 1) 100%);
+}
+
+.images{
+  position: absolute;
+  width: 1024px;
+  height: 100%;
+  object-fit: cover;
+}
+
+#night-road{
+  bottom:10%;
+  width: 1024px;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('../image/night-road.jpg');
+  z-index: -3;
+}
+
+/* BODY==============================*/
+.linewrapper{
+  position: absolute;
+  width:50px;
+  height: var(--line-height);
+  top: 260px;
+  left: 90px;
+  border: 10px solid greenyellow;
+  border-left:none;
+  border-right: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -2;
+}
+.line{
+  position: absolute;
+  width: 0px;
+  height: var(--line-height);
+  border-left: 10px solid greenyellow;
+}
+.linewrapperdark{
+  position: absolute;
+  width:50px;
+  height: var(--line-height);
+  top: 265px;
+  left: 95px;
+  border: 10px solid green;
+  border-left:none;
+  border-right: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -3;
+}
+.linedark{
+  position: absolute;
+  width: 0px;
+  height: var(--line-height);
+  border-left: 10px solid green;
+}
+
+
+.majorLi{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*margin-top: -20px;*/
+  height: 300px;
+  min-height: 200px;
+}
+.majorDivWrapper{
+  display: flex;
+  position: relative;
+  height: fit-content;
+  margin: 10px;
+}
+
+.majorDiv{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width:fit-content;
+  min-height: 75px;
+  height: fit-content;
+  border : 2px solid dodgerblue;
+  background-color: rgb(220, 239, 255);
+  border-radius: 10px;
+  padding: 0px 7px 0px 7px;
+  font-size: 32px;
+  transition-duration: .5s;
+}
+.majorLi:hover>.majorDivWrapper>.majorDiv{
+  box-shadow: 0px 0px 25px 25px dodgerblue;
+  transition-duration: .5s;
+}
+.majorDivShine{
+  box-shadow: 0px 0px 25px 25px dodgerblue;
+  transition-duration: .5s;
+}
+
+.forceExtraMargin{
+  margin-top: 50px;
+  /*margin-bottom: 30px;*/
+}
+
+
+.minorDivRight{
+  position: relative;
+  justify-self: flex-end;
+  display: flex;
+  top:50%;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: fit-content;
+  padding: 10px;
+  border: 3px solid gold;
+  background-color: rgb(219 213 110);
+  border-radius: 20px;
+
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: .5s;
+  z-index: -1;
+}
+.majorLi:hover>.majorDivWrapper>.minorDivRight{
+  opacity: 1;
+  visibility: visible;
+  transform: translate(320px, 0px);
+  transition-duration: .5s;
+  z-index: -1;
+}
+.moveRight{
+  opacity: 1;
+  visibility: visible;
+  transform: translate(320px, 0px);
+  transition-duration: .5s;
+  z-index: -1;
+}
+
+.minorDivLeft{
+  position: relative;
+  justify-self: flex-end;
+  display: flex;
+  top:0;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: fit-content;
+  padding: 10px;
+  border: 3px solid gold;
+  background-color: rgb(219 213 110);
+  border-radius: 20px;
+
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: .5s;
+  z-index: -1;
+}
+.majorLi:hover>.majorDivWrapper>.minorDivLeft{
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-320px, 0px);
+  transition-duration: .5s;
+  z-index: -1;
+}
+.moveLeft{
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-320px, 0px);
+  transition-duration: .5s;
+  z-index: -1;
+}
+
+
+.innerContent{
+  margin: 5px auto;
+  border: 3px dashed rgb(230, 119, 119);
+  padding: 2px 10px;
+  font-size: 20px;
+}
+
+
+.noHover{
+  pointer-events: none;
+}
+#roadMapUlWrapper{
+  position: relative;
+}
+
+#roadmapUl{
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+  height: 100%;
+}
+#showAllButtonWrapper{
+  position: absolute;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+#showAllButton{
+  position: absolute;
+  font-family: 'Jua', sans-serif;
+  font-size: 30px;
+  cursor: pointer;
+  top:20px;
+  margin-bottom: 60px;
+  width:300px;
+  border: 5px solid gold;
+  background-color: gold;
+  border-radius: 20px;
+  box-shadow: 0 5px 0 goldenrod,0 7px 15px -4px black;
+  transition: box-shadow 0.1s ease-out, margin-top .1s ease-out;
+}
+#showAllButton:active{
+  box-shadow: none;
+  margin-top: 8px;
+}
+
+/* Footer ================== */
+.footercontainer{
+  /*margin-top: 100px;*/
+  display: flex;
+  align-self: flex-start;
+  position: relative;
+  height: 50px;
+  
+  border-top: 5px solid white;
+}
+#footerText{
+  left: 5px;
+  width: 1024px;
+  max-width: 1024px;
+  color: white;
+  margin: 0 auto;
+}
